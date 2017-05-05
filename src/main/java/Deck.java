@@ -20,7 +20,16 @@ public class Deck {
             deck.remove(index);
         }
         for(int i = 0; i < 36; i ++){
-            System.out.println(shuffleDeck.get(i).getSuit() + " " + shuffleDeck.get(i).getRank());
+            deck.add(shuffleDeck.get(i));
+            System.out.println(deck.get(i).getSuit() + " " + deck.get(i).getRank());
         }
+    }
+
+    public ArrayList<Card> getDeck(){
+        return deck;
+    }
+
+    public void deleteCardFromDeck(int i){
+        deck.remove(i);
     }
 }
